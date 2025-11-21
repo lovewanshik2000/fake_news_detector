@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Satya Guard </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Satya Guard</h1>
+        <p>Enter text or upload an image/video to check its authenticity.</p>
+
+        <div class="form-container">
+            <form action="/analyze" method="post" enctype="multipart/form-data">
+                
+                <h2>Analyze Text</h2>
+                <textarea name="text_input" rows="5" placeholder="Enter news text here..."></textarea>
+                <button type="submit" name="submit_text">Analyze Text</button>
+
+                <hr>
+
+                <h2>Analyze Image/Video</h2>
+                <label for="file_upload">Upload File:</label>
+                <input type="file" id="file_upload" name="file_upload">
+                <button type="submit" name="submit_file">Analyze File</button>
+            </form>
+        </div>
+
+        <div class="result-container">
+            {% if result %}
+            <h3>Analysis Result:</h3>
+            <p><strong>Type:</strong> {{ result.type }}</p>
+            <p><strong>Result:</strong> {{ result.message }}</p>
+            <p><strong>Confidence:</strong> {{ result.confidence }}%</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
