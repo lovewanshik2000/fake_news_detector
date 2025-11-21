@@ -1,0 +1,91 @@
+
+<html>
+<head>
+    <title>Text Model Evaluation Report</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+            background: #f7f7f7;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            border-radius: 8px;
+        }
+        pre {
+            background: #1e1e1e;
+            color: white;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>📰 Fake News Classifier — Evaluation Report</h1>
+<p><b>Generated:</b> 2025-11-15 15:54:18</p>
+
+<div class="card">
+<h2>📊 Summary Metrics</h2>
+<p><b>Accuracy:</b> 97.90%<br>
+<b>Precision:</b> 0.979<br>
+<b>Recall:</b> 0.979<br>
+<b>F1 Score:</b> 0.979<br>
+<b>AUC:</b> 0.041</p>
+</div>
+
+<div class="card">
+<h2>📘 Classification Report</h2>
+<pre>              precision    recall  f1-score   support
+
+        FAKE       0.98      0.97      0.98       123
+        REAL       0.98      0.99      0.98       163
+
+    accuracy                           0.98       286
+   macro avg       0.98      0.98      0.98       286
+weighted avg       0.98      0.98      0.98       286
+</pre>
+</div>
+
+<div class="card">
+<h2>📌 Confusion Matrix</h2>
+<img src="images/confusion_matrix.png">
+</div>
+
+<div class="card">
+<h2>📈 ROC Curve</h2>
+<img src="images/roc_curve.png">
+</div>
+
+<div class="card">
+<h2>🎯 Calibration Curve</h2>
+<img src="images/calibration_curve.png">
+</div>
+
+<div class="card">
+<h2>📊 Probability Distribution</h2>
+<img src="images/probability_distribution.png">
+</div>
+
+<div class="card">
+<h2>❗ Misclassified Samples</h2>
+<p>See file: html_report/misclassified_samples.csv</p>
+<pre>                                                                                             text label Unnamed: 2 Unnamed: 3
+75       Drinking eight glasses of orange juice a day will eliminate the need for sleep entirely.  FAKE        NaN        NaN
+82   Scientists develop a biodegradable material that completely dissolves after one year of use.  REAL        NaN        NaN
+298                                                                              Ganesh is a boy.  REAL        NaN        NaN
+310                    Election Commission arrests candidate using cryptocurrency for vote buying  FAKE        NaN        NaN
+331                                      Police foil plot to disrupt counting center power supply  FAKE        NaN        NaN
+342                                 Students offered free laptops for attending political rallies  FAKE        NaN        NaN</pre>
+</div>
+
+</body>
+</html>
