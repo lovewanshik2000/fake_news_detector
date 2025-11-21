@@ -1,0 +1,132 @@
+body {
+font-family: 'Inter', Arial, sans-serif; /* Added Inter font */
+background-color: #f4f4f9;
+color: #333;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+margin: 0;
+padding: 1rem;
+}
+
+.container {
+background-color: #fff;
+padding: 2em;
+border-radius: 12px; /* Smoother corners /
+box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); / Deeper shadow */
+width: 90%;
+max-width: 800px;
+text-align: center;
+}
+
+h1 {
+color: #3b82f6; /* Blue for primary theme /
+font-weight: 800; / Bold title */
+margin-bottom: 0.5rem;
+}
+
+.form-container {
+margin-top: 2em;
+padding: 1.5em;
+border: 1px solid #ddd;
+border-radius: 8px;
+text-align: left;
+background-color: #f9f9fb;
+}
+
+h2 {
+color: #1f2937;
+font-size: 1.25rem;
+font-weight: 600;
+margin-top: 1.5em;
+margin-bottom: 0.75em;
+}
+.form-container hr {
+margin: 2em 0;
+border-color: #e5e7eb;
+}
+
+textarea {
+width: 100%;
+padding: 12px;
+margin-bottom: 15px;
+border: 2px solid #ccc;
+border-radius: 8px;
+box-sizing: border-box;
+transition: border-color 0.3s;
+}
+textarea:focus {
+border-color: #3b82f6;
+outline: none;
+}
+
+input[type="file"] {
+margin-bottom: 15px;
+}
+
+button {
+background-color: #3b82f6; /* Primary blue button */
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+font-size: 16px;
+font-weight: 600;
+transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+background-color: #2563eb;
+transform: translateY(-1px);
+}
+
+/* --- Result Specific Styles (CRITICAL FOR OUTPUT) --- */
+.result-container {
+margin-top: 2em;
+padding: 1.5em;
+border-radius: 12px;
+text-align: left;
+transition: all 0.3s;
+}
+
+.result-fake {
+background-color: #fee2e2; /* Light Red /
+border: 2px solid #ef4444; / Darker Red */
+color: #ef4444;
+}
+
+.result-real {
+background-color: #d1fae5; /* Light Green /
+border: 2px solid #10b981; / Darker Green */
+color: #10b981;
+}
+
+.result-error, .result-pending {
+background-color: #fef3c7; /* Light Yellow /
+border: 2px solid #f59e0b; / Darker Yellow/Orange */
+color: #f59e0b;
+}
+
+.result-container h3 {
+margin-top: 0;
+font-size: 1.5rem;
+font-weight: 800;
+}
+
+.result-container p {
+margin: 0.5em 0;
+color: #1f2937; /* Default text color for result details */
+}
+
+.result-container strong {
+font-weight: 700;
+}
+
+.result-container .confidence-value {
+font-size: 1.75rem;
+font-weight: 900;
+display: block;
+margin-top: 0.25em;
+}
